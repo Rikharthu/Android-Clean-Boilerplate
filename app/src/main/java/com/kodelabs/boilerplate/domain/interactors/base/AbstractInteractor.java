@@ -49,6 +49,9 @@ public abstract class AbstractInteractor implements Interactor {
         mIsCanceled = false;
     }
 
+    /**
+     * Use this method to start the Interactor
+     */
     public void execute() {
 
         // mark this interactor as running

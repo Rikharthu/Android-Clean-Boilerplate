@@ -11,6 +11,6 @@ public class AndroidApplication extends Application {
         super.onCreate();
 
         // initiate Timber
-        Timber.plant(new DebugTree());
+        Timber.plant(new DevelopmentTree());
     }
 }
