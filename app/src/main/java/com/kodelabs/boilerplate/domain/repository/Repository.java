@@ -5,13 +5,13 @@ import com.kodelabs.boilerplate.domain.model.SampleModel;
 /**
  * A sample repository with CRUD operations on a model.
  */
-public interface Repository {
+public interface Repository<T> {
 
-    boolean insert(SampleModel model);
+    boolean insert(T model);
 
-    boolean update(SampleModel model);
+    boolean update(T model);
 
-    SampleModel get(Object id);
+    T get(long id);
 
-    boolean delete(SampleModel model);
+    boolean delete(T model);
 }

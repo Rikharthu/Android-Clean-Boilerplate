@@ -37,6 +37,15 @@ public class MessageRepositoryImpl implements MessageRepository {
     }
 
     @Override
+    public List<com.kodelabs.boilerplate.domain.model.Message> getAllMessage() {
+        List<com.kodelabs.boilerplate.domain.model.Message> result = new ArrayList<>();
+        for (Message message : mData) {
+            result.add(StorageModelConverter.convertToDomainModel(message));
+        }
+        return result.isEmpty() ? null : result;
+    }
+
+    @Override
     public boolean insert(com.kodelabs.boilerplate.domain.model.Message model) {
         // check if id is not reused
         for (Message message : mData) {

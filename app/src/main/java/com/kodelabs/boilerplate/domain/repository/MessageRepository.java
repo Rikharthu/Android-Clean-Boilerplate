@@ -2,12 +2,9 @@ package com.kodelabs.boilerplate.domain.repository;
 
 import com.kodelabs.boilerplate.domain.model.Message;
 
-public interface MessageRepository {
-    boolean insert(Message model);
+import java.util.List;
 
-    boolean update(Message model);
+public interface MessageRepository extends Repository<Message> {
 
-    Message get(long id);
-
-    boolean delete(Message model);
+    List<Message> getAllMessage();
 }
